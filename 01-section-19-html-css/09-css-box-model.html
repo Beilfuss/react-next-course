@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* bordas e paddings são usados no cálculo da altura e largura do elemento. */ 
+                                    /* padding não vai para fora mais, não vai crescer o elemento, ele só "enche para dentro". Mesma coisa para a borda */
+                                    /* elemento sempre vai ter o tamanho exato indicado */
+                                    /* geralmente se coloca essas propriedades quando vai começar a configurar CSS */
+        }
+
+        .section-one {
+            color: white;
+            background-color: deeppink;
+            background-image: url(https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892272/EducationHub/photos/hoh-river-valley.jpg);
+            background-size: cover;
+            background-position: center center; /* do topo pra baixo no centro e da esquerda para direita no centro */
+            width: 300px;
+            height: 150px;
+            border: 5px solid black;
+            padding: 15px; /* imagem vai até o padding, mas conteúdo não */
+            margin: 20px; /* margin é transparente, só serve para empurrar o conteúdo para longe de outro conteúdo */
+            /* margin é 20px mesmo, mas quebra a linha, por isso a margem cobre toda a direita */
+        }
+        .section-two {
+            background: cyan;
+            width: 200px;
+            height: 50px;
+            border-style: solid;
+            border-bottom-width: 10px;
+            border-top-color: blue;
+            border-right-color: yellow;
+            border-left-color: red;
+            border-bottom-color: green;
+            padding: 15px 0 0 0; /* tudo; cima e lados; top, right, bottom, left */
+            margin: 30px; /* as duas margins são unidas, e a maior vai ser usada */
+        }
+    </style>
+</head>
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model -->
+    <!-- https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model -->
+
+    <!-- HTML é a marcação, o que vai existir na página. CSS é o estilo do que vai existir na página -->
+
+    <section class="section-one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </section>
+    <section class="section-two">2</section>
+
+</body>
+</html>
