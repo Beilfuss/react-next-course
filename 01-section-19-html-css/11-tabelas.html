@@ -13,7 +13,7 @@
 
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: 800px;
         }
 
         table td, table th { /* seleciona todas as tables e tds e ths dentro das tables */
@@ -38,52 +38,68 @@
             font-style: italic;
         }
 
+        .responsive-table {
+            max-width: 100%;
+            overflow-x: auto; /* scroll na div */
+        }
+
     </style>
 </head>
 <body>
 
     <p>Lorem ipsum dolor sit.</p>
 
-    <table>
+    <div class="responsive-table"> <!-- para "rolar" a tabela para o lado -->
 
-        <caption>Uma descrição para a tabela</caption>
+        <table>
 
-        <thead> <!-- cabeçalho da tabela -->
-            <tr> <!-- linha da tabela -->
-                <th>Título 1</th> <!-- título das colunas -->
-                <th>Título 2</th>
-                <th>Título 3</th> <!-- para baixo da tabela, sempre deve haver a mesma quantidade de colunas -->
-            </tr>
-        </thead>
+            <caption>Uma descrição para a tabela</caption>
 
-        <tbody>
-            <tr>
-                <td>Corpo 1</td> <!-- célula da primeira coluna -->
-                <td>Corpo 2</td>
-                <td>Corpo 3</td>
-            </tr>
-            <tr>
-                <td>Corpo 1</td> 
-                <td>Corpo 2</td>
-                <td>Corpo 3</td>
-            </tr>
-            <tr>
-                <td>Corpo 1</td> 
-                <td>Corpo 2</td>
-                <td>Corpo 3</td>
-            </tr>
-        </tbody>
+            <thead> <!-- cabeçalho da tabela -->
+                <tr> <!-- linha da tabela -->
+                    <th>Título 1</th> <!-- título das colunas -->
+                    <th>Título 2</th>
+                    <th>Título 3</th> <!-- para baixo da tabela, sempre deve haver a mesma quantidade de colunas -->
+                </tr>
+            </thead>
 
-        <tfoot> <!-- rodapé da tabela -->
-            <tr>
-                <td>Corpo 1</td> 
-                <td>Corpo 2</td>
-                <td>Corpo 3</td>
-            </tr>
-            </tr>
-        </tfoot>
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td> <!-- célula da primeira coluna -->
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Corpo 1</td> <!-- ocupa duas células -->
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Corpo 1</td> <!-- ocupa três células -->
+                </tr>
+                <tr>
+                    <td>Corpo 1</td> 
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2">Corpo 1</td> <!-- ocupa duas colunas e duas linhas -->
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
 
-    </table>
+            <tfoot> <!-- rodapé da tabela -->
+                <tr>
+                    <td colspan="2" rowspan="2"></td> 
+                    <td rowspan="2">Total: 497</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </div>
 
 </body>
 </html>
