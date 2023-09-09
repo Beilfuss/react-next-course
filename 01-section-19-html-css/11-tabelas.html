@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table td, table th { /* seleciona todas as tables e tds e ths dentro das tables */
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table caption {
+            caption-side: top;
+            text-align: left;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        tfoot td, table th {
+            background: #ddd;
+        }
+
+        tfoot td{
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit.</p>
+
+    <table>
+
+        <caption>Uma descrição para a tabela</caption>
+
+        <thead> <!-- cabeçalho da tabela -->
+            <tr> <!-- linha da tabela -->
+                <th>Título 1</th> <!-- título das colunas -->
+                <th>Título 2</th>
+                <th>Título 3</th> <!-- para baixo da tabela, sempre deve haver a mesma quantidade de colunas -->
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Corpo 1</td> <!-- célula da primeira coluna -->
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 1</td> 
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 1</td> 
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+        </tbody>
+
+        <tfoot> <!-- rodapé da tabela -->
+            <tr>
+                <td>Corpo 1</td> 
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+</html>
