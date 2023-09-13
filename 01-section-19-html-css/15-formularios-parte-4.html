@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="get" target="_blank" autocomplete="off">
+
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Ex.: email@email.com">
+        </p>
+
+        <p>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha">
+        </p>
+
+        <p>
+            <label for="range">Range:</label>
+            <input type="range" id="range" name="range" min="0" max="100" step="2" list="tickmarks">
+            
+            <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+                </datalist>
+        </p>
+
+        <p>
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url" placeholder="Digite uma URL">
+        </p>
+
+        <p>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search" placeholder="Busca"> <!-- apenas semântico, não muda nada -->
+        </p>
+
+        <p>
+            <label for="select">Selecione alguma opção:</label>
+            <select name="select" id="select">
+                <optgroup label="Primeiro grupo de opções">
+                    <option value="1">Opção 1</option>
+                    <option value="2" disabled>Opção 2</option>
+                    <option value="3" label="Opção 3"> <!-- outra forma de fazer o mesmo -->
+                    <option value="4" label="Opção 4" selected>
+                </optgroup>
+                <optgroup label="Segundo grupo de opções">
+                    <option value="1">Opção 1</option>
+                    <option value="2" disabled>Opção 2</option>
+                    <option value="3" label="Opção 3"> <!-- outra forma de fazer o mesmo -->
+                    <option value="4" label="Opção 4" selected>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="select">Selecione alguma opção:</label>
+            <select name="select" id="select" multiple>
+                <optgroup label="Primeiro grupo de opções">
+                    <option value="1">Opção 1</option>
+                    <option value="2" disabled>Opção 2</option>
+                    <option value="3" label="Opção 3"> <!-- outra forma de fazer o mesmo -->
+                    <option value="4" label="Opção 4" selected>
+                </optgroup>
+                <optgroup label="Segundo grupo de opções">
+                    <option value="1">Opção 1</option>
+                    <option value="2" disabled>Opção 2</option>
+                    <option value="3" label="Opção 3"> <!-- outra forma de fazer o mesmo -->
+                    <option value="4" label="Opção 4" selected>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="textarea">Área de texto:</label>
+            <textarea name="textarea" id="textarea" cols="10" rows="4">
+                Placeholder da textarea.
+            </textarea> <!-- colunas é caracteres -->
+        </p>
+        
+        <p>
+            <button type="reset">Resetar</button>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
