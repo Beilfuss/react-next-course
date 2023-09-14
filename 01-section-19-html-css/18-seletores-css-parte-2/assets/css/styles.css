@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pai h1+p { /* adjacent sibling combinator. Seleciona diretamente todo elemento que estiver diretamente depois do primeiro elemento
+    nesse caso, "para um elemento da classe "pai", encontra um p que vier depois de h1 */
+    color: red;
+}
+
+.pai p+h1 { /* contrário. Seleciona h1 que vem depois do p */
+    color: blue;
+}
+
+.pai2 h1~p { /* general sibling selector. Seleciona todos os elementos depois de um elemento */
+    /* nesse caso, seleciona todos os Ps depois de h1 
+    pode-se fazer o mesmo com classes, ids etc. */
+    color: green;
+}
+
+[meu-atributo] { /* seleção de atributo criado */
+    color: red;
+}
+
+[meu-atributo2="valor"] {
+    color: blue;
+}
+
+[checked] { /* seleção de atributos, pode ser para atributos padrão também (geralmente se usa pseudoclasses ou pseudoelementos para isso) */
+    width: 50px;
+    height: 50px;
+}
