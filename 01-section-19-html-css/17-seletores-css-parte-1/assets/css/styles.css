@@ -1,0 +1,66 @@
+* { /* seletor de tudo, normalmente usado para "zerar" o css */ 
+    margin: 0;
+    padding: 0;
+}
+
+h1, p { /* seletor de tag */
+    color: green;
+}
+
+body div section p, /* seleção múltipla de tags com vírgula */
+body div section h1 { /* seleção de descendentes 
+    (pega toda div que está dentro do body, depois toda section que está dentro de uma div dentro do body, e assim por diante)
+    O último elemento é o selecionado */
+    color: orange;
+}
+
+.color-purple { /*seleção de classe */
+    color: purple;
+}
+
+.main-content h2 { /* seleciona todo h2 dentro de elementos com a classe "main-content" */
+    font-style: italic;
+}
+
+div.main-content h2.heading { /* combinação pode ser com qualquer coisa: classe com tag, classe com classe, id com tag etc. */
+            /* pode-se especificar que o elemento tem que estar dentro de uma classe e de um tipo específico (h2, nesse caso) */ 
+    color: brown;
+}
+
+body.error div.main-content h2.heading { /* pode-se programar algo em um elemento específico caso dê algum erro (adicionar classe automaticamente com JS) */
+    color: red;
+}
+
+.pai { /* herança de propriedades */
+    color: blue;
+}
+
+/* div { essa configuração está presente no navegador por padrão 
+    color: inherit;
+} */
+
+div { /* essa configuração faz as tags não herdarem mais as propriedades */
+    color: initial;
+    margin-left: 20px;
+}
+
+.pai .filha { /* seleção de dependente */ 
+    color: red;
+}
+
+.pai.filha { /* deixando as classes juntas, significa que o elemento selecionado tem que ter a classe "pai" e a classe "filha" 
+                essa seleção só iria ocorrer se a filha também tivesse a classe "pai"*/ 
+    color: yellow;
+}
+
+.father.son {
+    color: yellow;
+}
+
+.dad > .child { /* "child selector". Seleciona filho direto do pai */
+    color: cyan;
+}
+
+.dad > .child > .child{ /* pai que tem diretamente no pai uma filha que tem diretamente na filha outra filha. Se tiver uma outra tag no meio, já não funciona */
+    color: deeppink;
+}
