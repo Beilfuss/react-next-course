@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletores de atributos
+      Podem ser usados tanto para os atributos padrão quanto os criados */
+
+[meu-atributo~="valor2"] { /* pode-se selecionar qualquer um dos valores */
+    color: red;
+}
+
+[meu-atributo|="valor"] { /* seleciona atributos que têm a palavra "valor" seguida de um "-" */
+    color: green;
+}
+
+[meu-atributo^="comeca"] { /* "começa com". Se o valor começa com "comeca", já funciona */
+    color: blue;
+}
+
+[meu-atributo$="termina"] { /* "termina com". Se o valor termina com "termina", já funciona */
+    color: purple;
+}
+
+[meu-atributo*="contem"] { /* "contém". Se o valor contém "contem", já funciona */
+    color: orange;
+}
