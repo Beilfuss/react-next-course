@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heading { 
+    transition: all 200ms ease-in-out; /* toda propriedade que mudar nesse elemento, quer que acontece algum efeito */ 
+    /* todas as transições, quanto tempo e como se quer que o efeito ocorra */
+}
+
+.heading:hover { /* Pseudo-classe vai depois de ":" */ 
+    background-color: red;
+}
+
+a {
+    color: green;
+}
+
+a:link {
+    color: deeppink;
+}
+
+a:visited { /* para links visitados */ 
+    color: darkorange;
+}
+
+a:hover {
+    background-color: darkslateblue;
+    color: white;
+    text-decoration: none;
+}
+
+a:active { /* indica que um elemento está ativo, clicado */ 
+    background-color: lightblue;
+    color: white;
+    text-decoration: none;
+}
