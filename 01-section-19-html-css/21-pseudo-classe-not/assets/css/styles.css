@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p:not(.meio) { /* todos os parágrafos, menos o da classe "meio" */
+    color: blue;
+}
+
+input:checked + p {
+    background-color: red;
+}
+
+input:not(checked) + p {
+    background-color: green;
+}
