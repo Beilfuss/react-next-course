@@ -1,0 +1,32 @@
+/* dois dois pontos para pseudo-elementos e só um dois pontos para pseudo-classes */
+/* mas, pseudo-elementos também funcionam só com um dois pontos */
+
+ul li::after { /* coloca alguma coisa depois do conteúdo do primeiro elemento  */
+    content: ' - '; /* traço não existe na página, é um pseudo-elemento */
+    background-color: aqua;
+    color: orange;
+}
+
+p::first-letter { /* estilo só para primeira letra */ 
+    font-size: 50px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+p::first-line { /* estilo só para primeira letra */
+    background-color: red;
+}
+
+p::selection {
+    background-color: black;
+    color: white;
+}
+
+::placeholder {
+    color: orange;
+}
+
+.form-field::placeholder {
+    color: green;
+}
