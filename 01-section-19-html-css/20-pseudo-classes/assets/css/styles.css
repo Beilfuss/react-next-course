@@ -35,3 +35,34 @@ a:active { /* indica que um elemento está ativo, clicado */
     color: white;
     text-decoration: none;
 }
+
+input:focus { /* todos os tipos de inputs podem ter foco */ 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled {
+    background-color: blueviolet;
+    cursor: not-allowed;
+}
+
+input:enabled{
+    background-color: lightgreen;
+}
+
+input:checked + p { /* quando input marcado, muda o p */
+    background-color: red;
+}
+
+.pai .lista li:first-child {
+    background-color: blue;
+}
+
+.pai .lista li:last-child {
+    background-color: red
+}
+
+input:required {
+    background-color: pink;
+}
