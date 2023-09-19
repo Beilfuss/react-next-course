@@ -1,0 +1,20 @@
+
+ul li:nth-child(2) { /* número sozinho indica o índice que se quer entre irmãos */
+    background-color: purple;
+}
+
+ul li:nth-child(even) { /* somente pares selecionados */
+    background-color: purple;
+}
+
+ul li:nth-child(odd) { /* somente ímpares selecionados */
+    background-color: turquoise;
+}
+
+ul li:nth-child(3n) { /* de três em três */
+    background-color: orange;
+}
+
+ul li:nth-child(3n+5) { /* começando do quinto elemento, aí conta de três em três  */
+    background-color: greenyellow;
+}
