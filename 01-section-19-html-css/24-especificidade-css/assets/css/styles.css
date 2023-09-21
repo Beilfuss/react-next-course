@@ -6,13 +6,25 @@ Regra de pontuação:
 ID   >   Classes, atributos e pseudo-classes  >   Elementos e pseudo-elementos
 1        0                                        0
 
-
 Selector especificity mostrado ao colocar mouse sobre seletor
 Selector especificity para id: (1, 0, 0)
 Selector especificity para classe: (0, 1, 0)
 
 Pode-se considerar centena, dezena e unidade. A maior especificidade sempre vai ser o maior número.
 Quanto mais específica a seleção, maior o valor.
+
+Usar "!important" nas regras (dar um espaço na regra e colocar ela, essa palavra vai forçar o navegador a aplicar a regra.
+"!important" só pode ser sobrescrito por outro "!important"
+
+Tomar cuidado em ser muito específico ou com "!important", porque ela muda o comportamento do navegador, e depois é difícil consertar.
+Usar só em último caso, e sempre tentar não usar.
+
+Em suma, regras mais específicas vão ser as mais aplicadas.
+
+Primeiro é checada a especificidade, depois empate, depois a tag style e por fim "!important"
+
+Na maioria dos casos, é preferível usar classes para estilizar os elementos, e dentro das classes, usar mais classes. Usando vários seletores de classes.
+Assim é mais seguro, mais fácil de empatar.
 
 */
 
@@ -36,4 +48,26 @@ p#p.p { /* especificidade passou a do acima */
     background-color: orange;
 }
 
-/* 8:00 */
+body#b.bclass p#p.p { /* especificidade 222, ainda maior */ 
+    background-color: purple;
+}
+
+body#b.bclass p#p.p::selection { /* especificidade 223 */ 
+    background-color: aqua;
+}
+
+body#b.bclass p#p.p::selection:hover { /* especificidade 233 */ 
+    background-color: pink;
+}
+
+body div ul li a { /* especificidade 5, de 5 elementos */
+    background-color: brown;
+}
+
+p { /* p tem especificidade 1. Com "!important", é considerado  */
+    background-color: chartreuse !important;
+}
+
+body#b.bclass p#p.p { /* empatou, mas como a especificidade desse é maior, esse ganha */ 
+    background-color: purple !important;
+}
