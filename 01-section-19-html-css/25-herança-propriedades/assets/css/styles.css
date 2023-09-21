@@ -1,0 +1,23 @@
+body { /* propriedades do body são herdadas por outras tags */
+    color: blue;
+    font-family: sans-serif;
+}
+
+#texto { /* filhos da div herdam propriedades */
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    font-size: 25px;
+}
+
+p {
+    font-size: initial; /* não deixa a fonte ser herdada */
+    /* desativa herança */
+}
+
+p {
+    font-size: inherit; /* se quiser que herde sendo específico, pode fazer usando "inherit" */
+    color: inherit;
+    /* ativa herança */
+}
+
+/* pode usar "initial" e "inherit" para qualquer propriedade
