@@ -1,0 +1,39 @@
+/* última regra aplicada prevalece */
+
+/*
+Regra de pontuação:
+
+ID   >   Classes, atributos e pseudo-classes  >   Elementos e pseudo-elementos
+1        0                                        0
+
+
+Selector especificity mostrado ao colocar mouse sobre seletor
+Selector especificity para id: (1, 0, 0)
+Selector especificity para classe: (0, 1, 0)
+
+Pode-se considerar centena, dezena e unidade. A maior especificidade sempre vai ser o maior número.
+Quanto mais específica a seleção, maior o valor.
+
+*/
+
+#p { /* maior especificidade  */
+    background-color: red;
+}
+
+.p {
+    background-color: blue;
+}
+
+#p.p { /* só aplica essa regra passando a especificidade de cima */
+    background-color: green;
+}
+
+p#p { /* especificidade acima ainda é maior */ 
+    background-color: yellow;
+}
+
+p#p.p { /* especificidade passou a do acima */ 
+    background-color: orange;
+}
+
+/* 8:00 */
