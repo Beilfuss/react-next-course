@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    padding: 15px;
+}
+
+.grid::after { /* cria um pseudo-elemento dentro de .grid que aparece depois dos elementos e limpa as laterais */
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid .col { /* contém só a estrutura */
+    box-sizing: border-box;
+    display: block; /* elementos ocupam a largura inteira da tela */
+    /* display: inline-block; /* junta block e inline, mas tem comportamentos diferentes */
+    width: 33.33%;
+    height: 300px;
+    float: left; /* Float: um elemento vai ocupar só o seu espaço e vai liberar o resto para outros elementos. 
+    Nesse caso, as margens são somadas. Além disso, elementos filhos não computam tamanho para o pai. Nesse caso, é como se ".grid" não tivesse tamanho */
+    padding: 15px;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+/* p {
+    clear: left; /* deixa a esquerda do elemento "limpa", começando onde não tem nada à esquerda. O mesmo para direita
+    clear: both; /* funciona para esquerda e direita, "limpando" os dois lados
+} */
+
+/* Propriedades mais importantes do display são block, inline, flex e grid. É possível fazer tudo com esses atributos */
+
+/* espaçamento é 30px porque soma margin e padding */
+
+/* Não se usa mais float. Aula apenas para aprendizado */
+/* Faltaram "breakpoints" também, para quebrar os blocos se eles ficarem muito espremidos */
