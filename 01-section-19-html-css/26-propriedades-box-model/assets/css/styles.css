@@ -1,0 +1,45 @@
+.block { 
+    display: block; /* padrão da div. Ocupa a largura inteira da tela */
+    background-color: red;
+    width: 50%; /* mesmo que sobre espaço, a div de cima ocupa todo o espaço da tela porque é display block */
+    width: 200px;
+    height: 200px; /* conteúdo não coube, passa para fora da div. Pode-se controlar isso */ 
+    overflow: hidden; /* o que passar para fora da div fica escondido */
+    overflow-y: scroll; /* agora pode scrollar na div e ver o que passou para fora. Barra aparece mesmo se não passar conteúdo para fora */
+    overflow: auto; /* barra lateral ou horizontal só aparece quando o conteúdo passar  */
+
+    /* propriedades que controlam o tamanho do conteúdo, além de "width" e "height" */
+    width: 100%; /* é o que já vem por padrão */
+    height: 100%; /* não funciona porque tem outros elementos "segurando" essas divs (como body ou html) */
+    max-width: 600px;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0 auto; /* ajusta a margin dos lados automaticamente. Pode-se fazer o mesmo com altura */ 
+    padding: 50px;
+    border: 5px groove black;
+    box-sizing: content-box; /* tudo de largura e altura só trabalha o conteúdo. Border, padding e margin são somados ao conteúdo, acrescentam essas características ao conteúdo */
+    box-sizing: padding-box; /* width e height incluem o tamanho do padding, mas não o da border */
+    box-sizing: border-box; /* engloba tudo. Se usar width e height, entra tudo no tamanho da caixa (menos a margin, que sempre é para fora do conteúdo) */
+}
+
+/*
+Propriedades para controlar o box-model:
+
+- Para controlar o conteúdo: width e height;
+    - box-sizing: border-box -> inclui padding e border;
+    - box-sizing: content-box -> padding, border e margin vão ser somados;
+    - box-sizing: padding-box -> padding é somado ao conteúdo, border e margin ficam para fora do conteúdo;
+- Para controlar o padding: padding;
+- Para controlar a border: border;
+- Para controlar a margin: margin.
+
+Padding preenche o conteúdo, margin se refere às caixas ao redor.
+
+
+*/
+
+.inline {
+    display: inline; /* elemento não pega mais configurações de tamanho, fundo etc. */ 
+}
+
