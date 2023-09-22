@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.color-tests { /* Pode-se usar vários tipos de cores */
+    width: 600px;
+    height: 600px;
+    background-color: red; /* selecionar pelo nome */
+    background-color: #0000ff; /* hexadecimal: dois primeiros vermelho, dois segundos verde, dois terceiros azul */
+    background-color: #00f; /* se tiver valores repetidos, pode resumir assim */
+    background-color: rgb(red, green, blue); /* mesma coisa que hexadecimal, mas com valores indo de 0 a 255 */
+    background-color: rgb(0, 255, 0);
+    background-color: rgba(red, green, blue, alpha); /* "alpha" é para opacidade da cor. Alpha vai de 0 a 1 */
+    background-color: rgba(255, 0, 0, 0.511); /* funciona com hexadecimal também */ 
+    color: #fff;
+    background-color: hsl(hue, saturation, ligthness); /* matiz, saturação e leveza */
+    background-color: hsl(10, 90%, 50%);
+    background-color: hsla(hue, saturation, lightness, alpha); /* também dá para colocar opacidade aqui */
+    background-color: hsl(10, 90%, 50%, 30%);
+}
