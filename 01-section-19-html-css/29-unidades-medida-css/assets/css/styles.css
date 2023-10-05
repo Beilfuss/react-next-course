@@ -4,3 +4,87 @@
     box-sizing: border-box;
 }
 
+/*
+
+Há medidas absolutas e relativas.
+Das unidades absolutas (que se coloca no elemento e ele não muda), a mais usada é pixel (px).
+
+Medidas absolutas são as não baseadas em nada, apenas na medida mesmo.
+Medidas relativas funcionam baseadas em outra coisa
+
+*/
+
+p {
+    font-size: 20px; /* px é uma unidade absoluta, parágrafo não está se baseando em nada para colocar essa fonte, apenas os pixels mesmo */
+}
+
+/*
+Medidas relativas funcionam baseadas em outra coisa
+"em" faz com que o elemento se comporte baseando-se no elemento pai mais próximo dele
+Valor do "em" (ou "rem") é vezes o do elemento pai (ou root, no caso do "rem")
+*/
+
+.pai {
+    font-size: 50px;
+}
+
+p {
+    font-size: 1em; /* agora, o parágrafo tem 50px de fonte */
+}
+
+p {
+    font-size: 0.5em; /* agora, o parágrafo tem 25px de fonte, metade do tamanho do pai */
+}
+
+/*
+Diferença entre "em" e "rem" é que o "rem" é baseado no elemento root do documento (html, no caso)
+*/
+
+html {
+    font-size: 20px;
+}
+
+p {
+    font-size: 1rem; /* agora, tem 20px de fonte porque está de acordo com o elemento root, html */
+}
+
+html {
+    font-size: 100%; /* como, para usar o tanto de espaço que o navegador tem disponível */
+}
+
+html {
+    font-size: 62.5%; /* nesse caso, pega 62.5% de 16px, que é o padrão do navegador
+                         16*0.625 = 10px. 1rem passa a ter 10px
+                         Usando % no html, pode-se usar rem para tudo */
+}
+
+.pai {
+    width: 30rem; /* 300px, 30*10px do html */
+    height: 30rem;
+    background-color: aqua;
+    /* agora o tamanho da fonte vai de acordo com o setado no navegador. Se usar px, isso não funciona */
+}
+
+/* 
+vw é em relação à largura do viewport
+vh é em relação à altura do viewport
+*/
+
+.pai {
+    width: 100vw; /* 100% da largura do viewport, área visível do navegador */
+    height: 100vh; /* 100% da altura do viewport */
+    /* div se comporta de acordo com o tamanho da tela */
+}
+
+.color-two {
+    background-color: orange;
+}
+
+.color-three {
+    background-color: purple;
+}
+
+html {
+    scroll-behavior: smooth; /* página rola suavemente para o target (usando vh) */
+}
+
