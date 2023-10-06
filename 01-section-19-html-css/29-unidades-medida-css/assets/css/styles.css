@@ -88,3 +88,28 @@ html {
     scroll-behavior: smooth; /* página rola suavemente para o target (usando vh) */
 }
 
+/* % é funciona com base no elemento pai */
+
+.pai {
+    width: 50rem; /* 500 pixels, nesse caso  */
+}
+
+.pai > div {
+    width: 50%; /* 50% em relação ao elemento pai. 250px nesse caso */
+    height: 50rem; /* 500px de altura */
+    background-color: pink;
+}
+
+/* vmin é a mesma coisa do vw e vh, mas vmin é relativo à menor parte do viewport 
+vmin é a menor largura ou altura e vmax */
+/* vmin 1% da MENOR medida entre vw e vh
+vmax 1% da MAIOR medida entre vw e vh */
+/* http://devfuria.com.br/html-css/unidade-vw-vh-vmax-vmin/ */
+
+.teste-vmax {
+    font-size: 5vmax;
+}
+
+.teste-vmax {
+    font-size: 5vmin;
+}
