@@ -1,0 +1,25 @@
+.p1 {
+    color: orange;
+    background-color: aqua;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700; /* nem toda fonte suporta valores de 100 a 900 */
+    font-weight: bold; /* pode só usar a palavra */
+    direction: ltr; /* left to right. Pode ser o contrário */
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: line-through underline;
+    text-indent: 50px; /* indenta parágrafos */
+}
+
+.p2 {
+    font-size: 50px;
+    text-shadow: 2px 2px 5px red; /* sombra da esquerda para direita 2px e do topo para baixo 2px, com cor vermelha. Esfumaçado no terceiro parâmetro */
+    text-shadow: 3px 0 0 red; /* esquerda para direita */
+    text-shadow: -3px 0 0 red; /* direita para esquerda */
+    text-shadow: -3px 3px 0 red; /* diagonal direita para esquerda */
+    text-shadow: 3px -3px 0 red; /* diagonal esquerda para direita */
+    text-transform: capitalize;
+}
