@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+}
+
+/* Exemplo de agenda */
+
+ul {
+    height: 100px;
+    overflow-y: auto; /* é preciso do comportamento de rolagem para ver o sticky */
+}
+
+ul li.sticky {
+    position: sticky;
+    background-color: lightblue;
+    top: 0; /* sem isso, não faz nada. Tem que dizer onde quer que o elemento fique "grudado". Nesse caso, no topo */
+}
+
+/* Resumo dos posicionamentos:
+
+- Static: não faz nada, não habilita opções de posicionamento;
+- Absolute: posição absoluta em relação à página ou elemento com posição "relative";
+- Fixed: posiciona um elemento e ele fica sempre naquele lugar, mesmo scrollando;
+- Relative: não muda o "flow" da página, mas se alinha com base nos elementos anteriores;
+- Sticky: "gruda" no seu ancestral mais próximo que tiver um mecanismo de scroll.
+
