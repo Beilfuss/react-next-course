@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+}
+
+.filha1, .filha2 {
+    width: 300px;
+    height: 300px;
+    background-color: cyan;
+    margin: 10px;
+    position: static; /* posição padrão do navegador */
+}
+
+.filha2 {
+    background-color: orange;
+    float: left;
+}
+
+.filha1 {
+    top: 50px; /* em relação ao topo da página ou outro elemento */
+    left: 50px; /* nesse caso, quer que a div vá 50 px para esquerda e para baixo */
+    /* não muda nada porque o elemento está em posição static */
+    position: relative; /* faz com que o elemento se comporte da maneira desejada */
+    /* além de habilitar top, left, right e bottom, deixa o elemento ter uma posição relativa à outros */ 
+    position: absolute; 
+    /* no relative, div se comporta como se o lugar em que ela estava ainda estivesse ali
+    no absolute, é como se mudasse o elemento de camada, como se a filha1 não existisse naquele local */
+
+}
+
+/* .filha3 {
+    background-color: rgba(255, 192, 203, 0.641); /* escurece a tela quando abre uma modal, por exemplo 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+
+/* .filha1 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* comportamento peculiar: como elemento não tem altura e largura, se esticou para caber na tela inteira 
+} */
+
+.filha1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px; /* correção do topo para o elemento ficar no meio da tela */
+    margin-left: -150px; /* correção da esquerda */
+}
+
+.pai {
+    height: 300vh;
+}
