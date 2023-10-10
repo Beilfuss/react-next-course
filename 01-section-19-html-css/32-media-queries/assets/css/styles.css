@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    padding: 15px;
+}
+
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid .col { 
+    box-sizing: border-box;
+    display: block;
+    /* width: 33.33%; */
+    height: 300px;
+    float: left;
+    padding: 15px;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+@media (max-width: 320px) { /* css daqui sobrescreve o anterior quando a tela tiver 320px */
+    /* geralmente se faz o contrário, começando pelo mobile (mobile first) */
+    .grid .col {
+        width: 100%;
+    }
+}
+
+/*
+Pode-se fazer várias media queries para dispositivos específicos, ou uma mais geral
+
+No media type (screen, tv, print etc.), adiciona-se o tipo e usa-se "and" para especificar outra coisa. Exemplos abaixo.
+*/
+
+@media only screen and (max-width: 320px) { /* para navegadores. "print" seria para quando fosse imprimir e "tv" para TVs */
+    /* "only" screen seria apenas para screen. "not" screen seria para todos menos screen */
+    /* o padrão é "all" */
+    .grid .col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 768px) { /* condição */
+    .grid .col {
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid .col {
+        width: 33.33%;
+    }
+}
+@media (min-width: 1200px) {
+    .grid .col {
+        width: 25%;
+    }
+}
