@@ -2,7 +2,7 @@
     margin: 0;
 }
 
-.filha1, .filha2 {
+.filha1, .filha2, .filha3 {
     width: 300px;
     height: 300px;
     background-color: cyan;
@@ -12,7 +12,7 @@
 
 .filha2 {
     background-color: orange;
-    float: left;
+    /* float: left; */
 }
 
 .filha1 {
@@ -55,4 +55,35 @@
 
 .pai {
     height: 300vh;
+}
+
+.filha2 {
+    position: absolute;
+    z-index: 1; /* filha 1 está na camada 1 */
+}
+
+.filha1 {
+    z-index: 2; /* camada acima da 1 */
+}
+
+/* valores do z-index podem ser quaisquer */
+
+.filha2 {
+    z-index: -1; /* comum. Leva o elemento para trás dos outros */
+}
+
+/* position relative não muda o "flow" da página */
+
+.filha3 {
+    background-color: violet;
+}
+
+.filha1filha { /* elemento dentro de outro respeita a posição do elemento inserido e só se move dentro daquele elemento */
+    position: absolute;
+    font-size: 50px;
+    background-color: white;
+    top: 0; /* não acontece nada */
+    left: 0; /* não acontece nada porque respeita o elemento em que está inserido */
+    top: 50px;
+    left: 50px; /* se move, mas só dentro do elemento em que está */
 }
