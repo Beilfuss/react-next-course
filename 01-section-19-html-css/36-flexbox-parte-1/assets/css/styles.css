@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* o container flex se comporta como display block, mas os seus filhos se comportam como display flex */
+
+.flex-container {
+    display: flex;
+    flex-direction: column; /* indica a direção do eixo principal do flex */
+    /* flex-direction pode ser row, column, row-reverse, column-reverse, */
+    align-items: center; /* funciona para o "cross axis", eixo perpendicular */
+    /* align-items pode ser stretch, start, center, end, baseline (alinha todos os elementos de acordo com o início da fonte)  */
+    justify-content: space-between; /* funciona para o "main axis", eixo principal */
+    /* justify-content pode ser start, end, center, space-around, space-between, space-evenly */
+    background-color: cyan;
+    height: 500px;
+    /* gap: 30px; /* espaçamento entre elementos (não funciona em todos os dispositivos) */
+}
+
+.flex-item {
+    /* width: 100%; /* ocupam o flex-container inteiro */
+    background-color: violet;
+    margin: 10px;
+}
+
+.flex-item:nth-child(3) {
+    font-size: 40px; /* para explicar o baseline */
+}
+
+/* Direção do flex determina qual o eixo principal e o perpendicular.
+Propriedade justify-content trabalha no eixo principal e
+align-items trabalha no eixo perpendicular */
