@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex; /* display flex se comporta como block em relação aos outros elementos */ 
+    /* display: inline-flex; /* aí se comporta como um elemento inline */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    background-color: cyan;
+}
+
+.flex-item {
+    flex-grow: 1; /* pega o espaço que tem sobrando e "cresce" o elemento para o tamanho específico da tela. Divide o espaço entre os conteúdos */
+    flex-basis: 320px; /* dá uma base de tamanho para dividir entre os elementos. Primeiro, deixa todo mundo com no mínimo 320px e depois vai aumentando como dá */
+    /* flex-grow: divide o espaço que sobrar para todos os elementos. Dá primeiro 320px pra cada um, e aí dividir o espaço que sobrou disso entre os elementos */
+    /* porém, se diminuir muito a tela, o elemento também diminui. Isso porque há outra propriedade que permite que o elemento diminua automaticamente: flex-shrink */
+    flex-shrink: 0; /* 1 permite que o elemento diminua. 0 não permite que ele diminua, elementos dão overflow */
+    /* width: 100%; /* para elemento ocupar 100% do espaço que sobrou para ele */
+    height: 100px;
+    background-color: violet;
+}
