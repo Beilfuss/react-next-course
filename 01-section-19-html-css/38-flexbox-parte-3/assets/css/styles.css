@@ -8,18 +8,53 @@
     display: flex; /* display flex se comporta como block em relação aos outros elementos */ 
     /* display: inline-flex; /* aí se comporta como um elemento inline */
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    flex-flow: row wrap;
+    flex-flow: row nowrap; /* atalho para flex direction e flex wrap */
     background-color: cyan;
+    height: 800px;
 }
 
 .flex-item {
-    flex-grow: 1; /* pega o espaço que tem sobrando e "cresce" o elemento para o tamanho específico da tela. Divide o espaço entre os conteúdos */
-    flex-basis: 320px; /* dá uma base de tamanho para dividir entre os elementos. Primeiro, deixa todo mundo com no mínimo 320px e depois vai aumentando como dá */
-    /* flex-grow: divide o espaço que sobrar para todos os elementos. Dá primeiro 320px pra cada um, e aí dividir o espaço que sobrou disso entre os elementos */
+    /* flex-grow: 1; /* pega o espaço que tem sobrando e "cresce" o elemento para o tamanho específico da tela. Divide o espaço entre os conteúdos */
+    /* flex-basis: 320px; /* dá uma base de tamanho para dividir entre os elementos. Primeiro, deixa todo mundo com no mínimo 320px e depois vai aumentando como dá */
+    /* flex-grow: divide o espaço que sobrar para todos os elementos. Dá primeiro 320px pra cada um, e aí divide o espaço que sobrou disso entre os elementos */
     /* porém, se diminuir muito a tela, o elemento também diminui. Isso porque há outra propriedade que permite que o elemento diminua automaticamente: flex-shrink */
-    flex-shrink: 0; /* 1 permite que o elemento diminua. 0 não permite que ele diminua, elementos dão overflow */
-    /* width: 100%; /* para elemento ocupar 100% do espaço que sobrou para ele */
-    height: 100px;
+    /* flex-shrink: 0; /* 1 permite que o elemento diminua. 0 não permite que ele diminua, elementos dão overflow */
+    width: 100%; /* para elemento ocupar 100% do espaço que sobrou para ele */
+    /* flex: 1 1 320px; /* atalho: flex grow (1), flex shrink (0) e flex basis (320px) */ 
+    /* height: 100px; */
     background-color: violet;
+}
+
+/*
+.flex-item:nth-child(2) {
+    flex: 2 1 320px; /* espaço é dividido entre todos os elementos igualmente, mas o 2 vai receber duas vezes mais o espaço em branco que sobrou */
+    /* nesse caso, o elemento 2 vai receber duas vezes o espaço que sobrou em relação aos outros
+    background-color: purple;
+}
+*/
+
+/* pode-se passar essa proporção para o flex grow ou para o flex shrink */
+
+/* 
+.flex-item:nth-child(3) {
+    align-self: flex-end; /* alinha só o elemento 3
+}
+
+.flex-item:nth-child(4) {
+    align-self: center; /* alinha só o elemento 4
+}
+
+.flex-item:nth-child(2) {
+    align-self: stretch; /* alinha só o elemento 2
+} */
+
+.flex-item:nth-child(1) {
+    order: 1; /* vai para o final da fila. Padrão é "0" */
+    order: -1; /* vai para o início porque não tem ninguém com order maior do que ele */
+}
+
+.flex-item:nth-child(2) {
+    order: -2; /* aí vai antes do 1 */
 }
