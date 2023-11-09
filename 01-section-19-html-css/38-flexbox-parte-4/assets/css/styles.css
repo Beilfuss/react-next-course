@@ -36,3 +36,5 @@ p {
     background-color: blue;
     margin: 10px;
 }
+
+/* Flex é ótimo para esse tipo de caso, em que vários elementos vão um dentro do outro */
