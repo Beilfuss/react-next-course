@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 40px;
+}
+
+.grid {
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-columns: [um] 1fr 
+    [dois] 1fr 
+    [tres] 1fr 
+    [quatro]; /* pode-se nomear as colunas dessa forma e utilizar os nomes
+    grid-template-rows: [um] 1fr 
+    [dois] 1fr 
+    [tres] 1fr 
+    [quatro]; pode-se nomear rows também */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* mais utilizado */
+    gap: 30px;
+}
+
+.grid div {
+    background-color: tomato;
+    min-height: 100px;
+}
+
+.grid div:nth-child(5) {
+    background-color: darkred;
+    /* grid-column-start: um;
+    grid-column-end: quatro; */
+    /* grid-column: um / quatro; /* sintaxe para usar esse shorthand 
+    grid-column: 1 / 3; /* faz a mesma coisa que o de cima 
+    grid-column: span 2 / 3; /* start da coluna faça um span de 2 colunas e termina na 3 
+    grid-column: span 2 / span 2;
+    grid-row: um / quatro; */
+    /* shorthand: grid-area */
+    /* grid-area: um / um / quatro / quatro ; /* linha que inicia / coluna que inicia / linha que termina / coluna que termina 
+    grid-area: 1 / 1 / 4 / 4 ; /* mesma coisa que o de cima */
+    grid-column: span 2;
+}
