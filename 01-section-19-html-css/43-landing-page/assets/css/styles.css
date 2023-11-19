@@ -1,6 +1,7 @@
 :root { /* variável no CSS */
     --primary-color: #0a1128;
     --white-color: #FFFFFF;
+    --light-grey-color: #eee;
     --gap: 3rem;
 }
 
@@ -81,6 +82,7 @@ a {
     left: 0;
     right: 0;
     width: 100%;
+    border-bottom: 1px solid var(--light-grey-color);
 }
 
 .menu h1 {
@@ -109,4 +111,22 @@ a {
     display: block; /* para facilitar o ajuste dos links */
     padding: 2rem;
     font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: crimson;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
 }
