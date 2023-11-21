@@ -1,3 +1,5 @@
+/* arquivo para estruturas */
+
 .main-bg { /* bg vai para qualquer tag que tiver essa classe */
     background-image: url('../img/main-bg.svg');
     background-size: cover;
@@ -17,4 +19,8 @@
 
 .section { /* seção do site. Não confundir com a tag <section> */ 
     min-height: 100vh;
+}
+
+.menu-spacing {
+    height: 65px;
 }
