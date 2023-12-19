@@ -1,7 +1,7 @@
 :root { /* variável no CSS */
     --primary-color: #0a1128;
     --white-color: #FFFFFF;
-    --light-grey-color: #eee;
+    --light-gray-color: #eee;
     --secondary-color: crimson;
     --gap: 3rem;
 }
