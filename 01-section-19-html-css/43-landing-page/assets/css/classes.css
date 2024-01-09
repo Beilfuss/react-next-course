@@ -15,7 +15,7 @@
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
-    padding: 8rem var(--gap);
+    padding: 10rem var(--gap);
 }
 
 .section { /* seção do site. Não confundir com a tag <section> */ 
@@ -24,4 +24,9 @@
 
 .menu-spacing {
     height: 65px;
+}
+
+body .full-width { /* "body" usado apenas para sobrescrever especificidade */
+    width: 100%;
+    flex: 1 1 100%;
 }
