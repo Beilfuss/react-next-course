@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- link:css -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            /* w100p */
+            width: 100%;
+
+            /* h100vh */
+            height: 100vh;
+
+            /* m10rem */
+            margin: 10rem;
+
+            /* p10p */
+            padding: 10%;
+
+            /* df */
+            display: flex;
+
+            /* dg */
+            display: grid;
+
+            /* dn */
+            display: none;
+
+            /* db */
+            display: block;
+
+            /* bg */
+            background: #000;
+
+            /* bgc */
+            background-color: #fff;
+
+            /* bgi */
+            background-image: url(#);
+
+            /* pos:a ou posa */
+            position: absolute;
+
+            /* t10rem */
+            top: 10rem;
+
+            /* b10rem */
+            bottom: 10rem;
+
+            /* r10rem */
+            right: 10rem;
+
+            /* l10rem */
+            left: 10rem;
+
+            /* bxz */
+            box-sizing: border-box;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <!-- Emmet abbreviation usa o seletor do elemento: "." para classe, "#" para id etc.-->
+
+    <!-- div.classe-um.classe-dois -->
+    <div class="classe-um classe-dois">Conteúdo</div>
+
+    <!-- div#meu-id -->
+    <div id="meu-id"></div>
+
+    <!-- div#meu-id.minha-classe.outra-classe -->
+    <div id="meu-id" class="minha-classe outra-classe"></div>
+
+    <!-- div#meu-id.minha-classe.outra-classe{Conteúdo} -->
+    <div id="meu-id" class="minha-classe outra-classe">Conteúdo</div>
+
+    <!-- div#meu-id.minha-classe.outra-classe{Conteúdo}*3 -->
+    <div id="meu-id" class="minha-classe outra-classe">Conteúdo</div>
+    <div id="meu-id" class="minha-classe outra-classe">Conteúdo</div>
+    <div id="meu-id" class="minha-classe outra-classe">Conteúdo</div>
+
+    <!-- div#meu-id-$.minha-classe.outra-classe{Conteúdo $}*3 -->
+
+    <div id="meu-id-1" class="minha-classe outra-classe">Conteúdo 1</div>
+    <div id="meu-id-2" class="minha-classe outra-classe">Conteúdo 2</div>
+    <div id="meu-id-3" class="minha-classe outra-classe">Conteúdo 3</div>
+
+    <!-- ul>li{Conteúdo $}*5 -->
+
+    <ul>
+        <li>Conteúdo 1</li>
+        <li>Conteúdo 2</li>
+        <li>Conteúdo 3</li>
+        <li>Conteúdo 4</li>
+        <li>Conteúdo 5</li>
+    </ul>
+
+    <!-- ul>(li>a{Conteúdo $}[href="http://link.com/conteudo-$"])*3 -->
+
+    <ul>
+        <li><a href="http://link.com/conteudo-1">Conteúdo 1</a></li>
+        <li><a href="http://link.com/conteudo-2">Conteúdo 2</a></li>
+        <li><a href="http://link.com/conteudo-3">Conteúdo 3</a></li>
+    </ul>
+
+    <!-- div.minha-classe#home>h1{Conteúdo Qualquer}+(p{Qualquer conteúdo.}>a{ Clique aqui}[href="#home"]+{ para saber mais})*2 -->
+
+    <div class="minha-classe" id="home">
+        <h1>Conteúdo Qualquer</h1>
+        <p>Qualquer conteúdo.<a href="#home"> Clique aqui</a> para saber mais</p>
+        <p>Qualquer conteúdo.<a href="#home"> Clique aqui</a> para saber mais</p>
+    </div>
+
+    <!-- section>h1+div>(p>span)*3 -->
+
+    <section>
+        <h1>Conteúdo</h1>
+        <div>
+            <p><span>Tópico 1</span></p>
+            <p><span>Tópico 2</span></p>
+            <p><span>Tópico 3</span></p>
+        </div>
+    </section>
+
+</body>
+</html>
