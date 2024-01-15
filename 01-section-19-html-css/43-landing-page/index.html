@@ -27,14 +27,16 @@
       -->
   </head>
   <body>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
       <div class="main-content menu-content">
-        <h1>
+        <h1 onclick="getElementById('close-menu').checked = false">
           <a href="#home">Logo</a>
         </h1>
 
         <nav>
-          <ul>
+          <ul onclick="getElementById('close-menu').checked = false">
             <li><a href="#intro">Intro</a></li>
             <li><a href="#grid-one">Grid One</a></li>
             <li><a href="#gallery">Gallery</a></li>
@@ -265,6 +267,8 @@
     <footer id="footer" class="footer white-bg">
       <p><a rel="nofollow" target="_blank" href="https://github.com/Beilfuss">Feito com <span class="heart">❤</span> por Matheus Beilfuss</a></p>
     </footer>
+
+    <a class="back-to-top" href="#home">➤</a>
 
   </body>
 </html>
