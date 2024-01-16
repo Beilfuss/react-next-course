@@ -6,7 +6,7 @@
 ## Tecnologias já estudadas:
 
 - [X] HTML;
-- [ ] CSS;
+- [X] CSS;
 - [ ] JavaScript;
 - (Loading...).
 
